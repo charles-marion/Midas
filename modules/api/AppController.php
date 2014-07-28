@@ -22,4 +22,13 @@
 class Api_AppController extends MIDAS_GlobalModule
   {
   public $moduleName = 'api';
+  
+  /** pre dispatch (zend)*/
+  public function preDispatch()
+    {
+    header("Access-Control-Allow-Origin:  *");
+    ob_start(); 
+    parent::preDispatch();
+    ob_clean(); 
+    }
   } // end class

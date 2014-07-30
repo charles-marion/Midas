@@ -67,7 +67,7 @@ abstract class ItemModelBase extends AppModel
   abstract function updateItemName($name, $parent);
 
   /** copy an other item policies*/
-  function copyItemtPolicies($itemdao, $referenceItemdao, $feeddao = null)
+  function copyItemPolicies($itemdao, $referenceItemdao, $feeddao = null)
     {
     if(!$itemdao instanceof ItemDao || !$referenceItemdao instanceof ItemDao)
       {
